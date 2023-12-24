@@ -15,10 +15,9 @@ def preprosessor(frame):
         upper = q3 + 1.5 * iqr
         lower = q1 - 1.5 * iqr
 
-    frame[i] = np.where(frame[i] > upper, upper, np.where(frame[i] < lower, lower, frame[i]))
+        frame[i] = np.where(frame[i] > upper, upper, np.where(frame[i] < lower, lower, frame[i]))
 
     frame["exhaust_vacuum"] = np.log1p(frame['exhaust_vacuum'])
-
     frame['r_humidity'] = np.square(frame['r_humidity'])
 
     return frame
