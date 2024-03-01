@@ -1,0 +1,5 @@
+outs:
+- md5: 645c2e7488463c4ef2b72bc3bd241283
+  size: 319264
+  hash: md5
+  path: raw.csv

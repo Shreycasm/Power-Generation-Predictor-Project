@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Production Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div>
+        <h1 class="title">Combined Cycle Power Plant Energy Production Predictor</h1>
+            <div class="container">
+                    <div class="prediction-box form-container">
+
+                        <form method="post" action="/predict">
+                            <label for="temperature">Temperature(˚C):</label>
+                            <input type="text" name="temperature" required><br>
+
+                            <label for="vacuum">Vacuum (cm Hg):</label>
+                            <input type="text" name="exhaust_vacuum" required><br>
+
+                            <label for="pressure">Pressure (millibars):</label>
+                            <input type="text" name="amb_pressure" required><br>
+
+                            <label for="humidity">Humidity (%):</label>
+                            <input type="text" name="r_humidity" required><br>
+
+                            <button type="submit">Predict</button>
+                        </form>
+
+                        {% if prediction %}
+                        <h2>Prediction Result:</h2>
+                        <p>{{ prediction | safe }}</p>
+                        {% endif %}
+                    </div>
+            </div>
+    </div>
+
+
+    <!-- Divider line -->
+    <hr class="hr-divider">
+
+    <!-- Video Section with Border -->
+    <div class="video-section">
+        <h3>Working of Combined Power Cycle</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KVjtFXWe9Eo" frameborder="0" allowfullscreen></iframe>
+
+        <div class="credits">
+            <!-- Add styles to remove underline from the credits link -->
+            <p>Credits: <u><a href="https://www.ge.com/gas-power/resources/education/combined-cycle-power-plants" target="_blank" class="credits-link">GE. POWER PLANT</a></u></p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

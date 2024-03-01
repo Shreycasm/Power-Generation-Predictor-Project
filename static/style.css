@@ -1,0 +1,97 @@
+body {
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow-y: auto;
+}
+
+.title {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    color: green;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    margin: 0 auto;
+}
+
+
+
+.prediction-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.hr-divider {
+    width: 50%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+    border: none;
+}
+
+.video-section {
+    border: 2px solid #ddd;
+    padding: 10px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+
+.credits-link {
+    text-decoration: none;
+    color: white;
+}
